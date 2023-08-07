@@ -1,0 +1,917 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap');
+                
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --blue-dark: #13324d;
+    --primary: #4586bf;
+    --secondary: #13324d;
+    --success: #51bc85;
+    --info: #4586bf;
+    --warning: #febc1e;
+    --danger: #f5644e;
+    --light: #ddd;
+    --dark: #13324d;
+    --textlight: #6c757d;
+}
+
+.navbar {
+    height:75px;
+    background-color: var(--dark);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 800px;
+    margin-left: 10px;
+    margin-top: -7px;
+    margin-bottom: -0px;
+}
+
+.grid2 {
+  grid-template-columns: repeat(4, 1fr);
+  width: 800px;
+}
+
+.griditem {
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.teammenu h4 {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.teammenu h5 {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.teammenuselected {
+    color: #000;
+    background-color: #eeeeee;
+}
+
+
+
+
+.playergrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.playergriditem {
+    justify-content: center;
+    align-items: center;
+    color: #eeeeee;
+}
+
+.playercard {
+    background-color: #fff;
+    width: 280px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+
+
+.playercardtop {
+    transition: 0.2s;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    background-color: var(--red);
+    width: 280px;
+    height: 35px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.playercardtop h4 {
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+
+}
+
+.playercardlastname {
+    justify-content: center;
+    align-items: center;
+
+margin-left: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    
+}
+
+.playercardnr {
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    
+}
+
+.drpdwn {
+    color: #fff;
+    background-color: var(--red);
+}
+
+.passbild {
+    border-bottom-left-radius: 10px;
+    margin-top: 10px;
+    height: 125px;
+}
+
+.playercardbottom {
+    color: #000;
+    margin-top: -100px;
+}
+
+.playercardfirstname {
+    justify-content: center;
+    align-items: center;
+
+margin-left: 110px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.playereditblock {
+    margin-left: 35%;
+    margin-top: -10%;
+    width: 30%;
+    height: 400px;
+    background-color: var(--light);
+    border-radius: 10px;
+}
+
+.playeredith1 {
+    color: var(--gray-dark);
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.playereditnachname {
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.playereditgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.playeredith12 {
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-dark);
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlaya a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  /* When you mouse over the navigation links, change their color */
+  .overlaya a:hover, .overlaya a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .overlaya .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 1.5%;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+    .overlaya .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+  .overlaya {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.7); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+
+  .sidemenubar {
+    width: 280px;
+    height: 800px;
+    margin-top: -15.2%;
+    background-color: var(--dark);
+  }
+
+  .sidemenuopt {
+    height: 50px;
+    background-color: var(--dark);
+    color: var(--light);
+    transition: 0.5s;
+  }
+  .sidemenuopt:hover {
+    background-color: var(--light);
+    color: #000;
+  }
+  .sidemenuopt:hover h4 {
+    color: #000;
+  }
+
+  .sidemenuopt h4 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--light);
+  }
+
+  .item1b {
+    grid-area: header; 
+  }
+  .item1 { 
+    grid-area: header; 
+    background-color: var(--dark);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  .item1a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  .item2 { 
+    vertical-align: top;
+    overflow: scroll;
+    max-height: 80dvh;
+    grid-area: menu;
+    background-color: var(--light);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; 
+    width: 500px;
+      }
+  .item2b { 
+    vertical-align: top;
+    background-color: #f00;
+    grid-area: menu;
+    min-height: 50%;
+    width: 500px;
+      }
+    .item2a {
+      vertical-align: top;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      justify-content: center;
+      align-items: center;
+      color: #000;
+    }
+
+  .protcolor {
+    margin-left: 10px;
+    width: 10px;
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+
+  .protstand {
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+
+  .protereignis {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+
+  .protspieler {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+  }
+  .item3 { 
+    grid-area: main; 
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; 
+  }
+  .item3a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .item4 { 
+    grid-area: left; 
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  .item4d {
+    justify-content: left;
+  }
+  .item4a {
+    font-size: 15px;
+    justify-content: left;
+    background-color: var(--blue);
+    width: 150px;
+    height: 60px;
+    border-color: var(--red);
+    border-width: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    left:0;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-left: 2vh;
+  }
+  .item4b {
+    margin-bottom: -100px;
+    background-color: #fff;
+    width: 146px;
+    height: 30px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 2px;
+    margin-top: 2px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .item4c {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    margin-top: -0vh;
+    margin-left: 110px;
+    font-size: 20px;
+  }
+  .item5 { 
+    grid-area: right; 
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+    .item6 { 
+      grid-area: mid; 
+      background-color: #fff;
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-gap: 10px;
+    }
+    .item6a {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tto {
+      width: 50px;
+      height: 50px;
+    }
+
+    .ttono {
+      background-color: var(--gray);
+      color: #000;
+    }
+    .ttono:hover {
+      cursor: not-allowed;
+      background-color: var(--gray-dark);
+      color: #000;
+    }
+  
+  .grid-container {
+    display: grid;
+    max-height: 100%;
+    grid-template-areas:
+      'header header header header header'
+      'menu main main main main'
+      'menu mid mid mid mid'
+      'menu left left right right';
+    gap: 2px;
+    background-color: var(--light);
+  }
+
+  .btn-color {
+    min-width:100%;
+    border-width: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bverw {
+    border-color: var(--yellow);
+    color: #000;
+  }
+
+  .bverw:hover {
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: #fff;
+  }
+  
+  .b2min {
+    border-color: var(--dark);
+    color: #000;
+  }
+
+  .b2min:hover {
+    background-color: #000;
+    border-color: #000;
+    color: #fff;
+  }
+  
+  .bred {
+    border-color: var(--red);
+    color: #000;
+  }
+
+  .bred:hover {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: #fff;
+  }
+  
+  .bblue {
+    border-color: var(--blue);
+    color: #000;
+  }
+
+  .bblue:hover {
+    background-color: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.prototopselected {
+  color: #fff;
+  background-color: #13324d;
+}
+
+.trans {
+  transition: 0.3s;
+}
+
+.coachcard {
+  background-color: #13324d;
+  color: #fff;
+}
+
+.coachcard2 {
+  color: #13324d;
+}
+
+.prottopdisabled {
+  opacity: 0%;
+}
+
+.item6b {
+  background-color: #13324d;
+  border-radius: 5px;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+}
+
+.yellowicon {
+  width: 10px;
+  background-color: #ffc107;
+  height: 20px;
+  margin-top: 12px;
+  border-radius: 3px;
+  margin-left: -5px;
+  margin-bottom: -30px;
+}
+
+.suspensionicon {
+  width: 10px;
+  background-color: #000;
+  height: 20px;
+  margin-top: 12px;
+  border-radius: 3px;
+  margin-left: -5px;
+  margin-bottom: -30px;
+}
+
+.offigrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  width: 98%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.offigriditem {
+  justify-content: left;
+  align-items: left;
+  color: #eeeeee;
+}
+
+.officard {
+  background-color: #fff;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+
+
+.officardtop {
+  transition: 0.2s;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background-color: #13324d;
+  width: 100%;
+  height: 35px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.officardtop h4 {
+  margin-left: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+
+}
+
+.officardlastname {
+  justify-content: center;
+  align-items: center;
+
+margin-left: 10px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  
+}
+
+.officardnr {
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+
+.officardbottom {
+  color: #000;
+  margin-top: -100px;
+}
+
+.officardfirstname {
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -57.5%;
+  margin-left: 47%;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.officardverein {
+  margin-left: 47%;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.officardcost {
+  margin-left: 47%;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.offibild {
+  border-bottom-left-radius: 10px;
+  height: 88%;
+}
+
+.offieditblock {
+  margin-left: 10%;
+  margin-top: -10%;
+  width: 80%;
+  height: 85dvh;
+  background-color: var(--light);
+  border-radius: 10px;
+}
+
+.offiedith1 {
+  background-color: #13324d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+  font-size: 400%;
+  height: 10%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.offieditnachname {
+  justify-content: center;
+  align-items: center;
+  border-color: #13324d;
+  width: 100%;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+
+.offieditside {
+  border-color: #13324d;
+  border-left-color: #eeeeee;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+.offieditgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.offieditgrid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.offieditgrid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.offiedith12 {
+  margin-top: 4%;
+  justify-content: left;
+  align-items: left;
+  color: var(--gray-dark);
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+
+
+.spielleitungchooser {
+  width: 20%;
+}
+
+.toast-teamcolor {
+  width: 1vh;
+  height: 1vh;
+  margin-bottom: -1.5vh;
+  border-radius: 1vh;
+}
+
+
+
+.spielprotokolloff {
+  background-color: #343a40;
+  cursor: not-allowed;
+}
+
+
+.smallyc {
+  margin-top: 1.3vh;
+  margin-left: -13.6vh;
+  background-color: #ff0;
+  width: 1.5vh;
+  height: 3vh;
+  border-radius: 0.2vh;
+}
+
+
+.small2m {
+  margin-top: -3vh;
+  background-color: rgb(0, 0, 0);
+  width: 1.5vh;
+  height: 3vh;
+  border-radius: 0.2vh;
+  margin-left: -11.6vh;
+  margin-bottom: -0vh;
+}
+
+
+
+
+.smallrc {
+  margin-top: -3vh;
+  background-color: #f00;
+  width: 1.5vh;
+  height: 3vh;
+  border-radius: 0.2vh;
+  margin-left: -5.6vh;
+  margin-bottom: -0vh;
+}
+
+
+
+
+.smallbc {
+  margin-top: -3vh;
+  background-color: #00f;
+  width: 1.5vh;
+  height: 3vh;
+  border-radius: 0.2vh;
+  margin-left: -3.6vh;
+  margin-bottom: -3.5vh;
+}
